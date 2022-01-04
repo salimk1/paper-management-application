@@ -1,0 +1,4 @@
+Seng
+Math
+Science
+DBMS

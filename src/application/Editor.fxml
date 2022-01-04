@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.EditorController">
+   <children>
+      <JFXComboBox fx:id="cbJournals" labelFloat="true" layoutX="25.0" layoutY="14.0" onAction="#journalSelected" prefHeight="28.0" prefWidth="129.0" promptText="Select Journal" />
+      <Label layoutX="305.0" layoutY="10.0" prefHeight="36.0" prefWidth="190.0" text="Welcome Editor">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutY="534.0" prefHeight="66.0" prefWidth="800.0" spacing="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnAddJournal" buttonType="RAISED" onAction="#addJournal" prefHeight="39.0" prefWidth="98.0" styleClass="normalBtn" stylesheets="@application.css" text="Add journal">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnReviewSubmissions" buttonType="RAISED" onAction="#reviewSubmission" prefHeight="39.0" prefWidth="138.0" styleClass="normalBtn" stylesheets="@application.css" text="Review Submissions">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAssignReviewer" buttonType="RAISED" onAction="#AssignReviewer" prefHeight="39.0" prefWidth="114.0" styleClass="normalBtn" stylesheets="@application.css" text="Assign Reviewer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton buttonType="RAISED" layoutX="703.0" layoutY="13.0" onAction="#logout" prefHeight="32.0" prefWidth="84.0" styleClass="cancelBtn" stylesheets="@application.css" text="Logout">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tableView" layoutX="60.0" layoutY="81.0" onMouseClicked="#columnSelected" prefHeight="393.0" prefWidth="680.0">
+         <columns>
+            <TableColumn fx:id="researcherColumn" prefWidth="173.0" text="Researcher" />
+            <TableColumn fx:id="submissionColumn" prefWidth="167.0" text="Submissions" />
+            <TableColumn fx:id="reviewerColumn" prefWidth="158.0" text="Reviewer" />
+            <TableColumn fx:id="deadlineColumn" prefWidth="181.0" text="Deadline" />
+         </columns>
+      </TableView>
+      <FontAwesomeIcon fx:id="refreshIcon" fill="#1b2afc" fontSmoothingType="LCD" glyphName="REFRESH" layoutX="168.0" layoutY="37.0" onMouseClicked="#refreshPage" size="1.8em" wrappingWidth="26.11428451538086">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+   </children>
+</AnchorPane>
