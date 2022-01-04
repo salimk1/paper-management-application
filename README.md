@@ -1,4 +1,4 @@
-<h1 align="center"><b>Paper Management System</b></h1>
+<h1 align="center"><b>Paper Management Application</b></h1>
 
 ## Table of Contents
 + Project Abstract
