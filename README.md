@@ -12,7 +12,7 @@ This project is a Java desktop application that helps researchers upload papers 
 1. Open the project in Eclipse
 2. Execute the `Main.java` file sorted here:
 	```
-	paper-management-system/src/application/Main.java
+	paper-management-application/src/application/Main.java
 	```
 
 ## Acknowledgments 
